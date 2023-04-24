@@ -2,12 +2,11 @@
 
 html {
   font-family: 'Roboto Slab', serif;
-  color: rgb(48, 48, 45);
+  color: rgb(46, 45, 48);
 }
 
 body {
   margin: 0;
-  background-color:antiquewhite;
 }
 
 main {
@@ -17,12 +16,12 @@ main {
 
 a {
   text-decoration: none;
-  color:rgb(255 113 0 / 60);
+  color:rgb(89, 0, 255);
 }
 
 a:hover,
 a:active {
-  color:rgb(255, 28, 28);
+  color:rgb(232, 90, 245);
 }
 
 ul, ol {
@@ -36,8 +35,8 @@ ul, ol {
 .btn {
   cursor: pointer;
   font: inherit;
-  background-color: rgb(255 113 0 / .6);
-  border: 1px solid rgb(255 113 0 / .6);
+  background-color: rgb(89, 0, 255);
+  border: 1px solid rgb(89, 0, 255);
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
@@ -45,27 +44,27 @@ ul, ol {
 
 .btn:hover,
 .btn:active {
-  background-color: rgb(255 113 0 / 60);
-  border-color: rgb(255 113 0 / 60);
+  background-color: rgb(71, 4, 196);
+  border-color: rgb(71, 4, 196);
   color: white;
 }
 
 .btn.btn-alt {
   background-color: transparent; 
   border-color: transparent;
-  color:rgb(255 113 0 / 60);
+  color:rgb(89, 0, 255);
 }
 
 .btn.btn-alt:hover,
 .btn.btn-alt:active {
-  color:rgb(255, 28, 28);
+  color:rgb(232, 90, 245);
 }
 
 /* Site-wide content / elements */
 
 #main-header {
   padding: 2rem 10%;
-  background-image: linear-gradient(rgb(255 113 0 / 60), rgba(255, 225, 0, 0.60));
+  background-color: rgb(89, 0, 255);
   display: flex;
   justify-content: space-between;
   align-items: center;

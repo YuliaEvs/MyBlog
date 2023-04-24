@@ -1,10 +1,22 @@
-const mysql = require('mysql2/promise');
+const mongodb = require('mongodb');
 
-const pool = mysql.createPool({
-    host: 'localhost',
-    database: 'blog',
-    user: 'root',
-    password: 'Aptc30918.'
-});
+const MongoClient = mongodb.MongoClient;
 
-module.exports = pool;
+let database;
+
+async function connect() {
+    const client = await MongoClient.connect('mongodb://localhost:27017');
+    database = client.db('blog');
+}
+ 
+function getDb() {
+    if (!database) {
+        throw { message: 'Database connection not established!'};
+    }
+    return database;
+}
+
+module.exports = {
+    connectToDatabase: connect,
+    getDb: getDb
+};
