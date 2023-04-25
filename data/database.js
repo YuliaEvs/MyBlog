@@ -5,18 +5,18 @@ const MongoClient = mongodb.MongoClient;
 let database;
 
 async function connect() {
-    const client = await MongoClient.connect('mongodb://localhost:27017');
-    database = client.db('blog');
+    const client = await MongoClient.connect('mongodb+srv://MyBlog:MyBlog@cluster0.be3ay5g.mongodb.net/test');
+    database = client.db('MyBlog');
 }
  
 function getDb() {
     if (!database) {
-        throw { message: 'Database connection not established!'};
+      throw { message: 'Database connection not established!' };
     }
     return database;
-}
-
-module.exports = {
+  }
+  
+  module.exports = {
     connectToDatabase: connect,
     getDb: getDb
-};
+  };
